@@ -8,7 +8,7 @@ describe('Check validateUsername', () => {
     });
 
   test.each(errors)(('Test case №%#: check error code %p and string: Unknown error'),
-    (code, _) => {
+    (code) => {
       const error = new ErrorRepository();
       expect(error.translate(code)).not.toBe('Unknown error');
     });
